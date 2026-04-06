@@ -88,13 +88,13 @@ const Dashboard = () => {
         </div>
 
         <div className="header-actions">
-          <button className="btn btn-primary btn-bill-header" onClick={() => setIsBillModalOpen(true)}>
-             <FileText size={18} />
-             <span>Create Bill</span>
-          </button>
           <button className="btn-icon notification-btn" onClick={() => navigate('/alerts')}>
             <Bell size={20} />
             {lowStockItems > 0 && <span className="badge">{lowStockItems}</span>}
+          </button>
+          <button className="btn btn-primary btn-bill-header" onClick={() => setIsBillModalOpen(true)} title="Create Bill">
+             <FileText size={18} />
+             <span>Create Bill</span>
           </button>
           <div className="user-avatar">
             <span>{user?.email?.[0].toUpperCase() || 'A'}</span>
